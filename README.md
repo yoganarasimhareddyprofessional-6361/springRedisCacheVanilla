@@ -34,7 +34,7 @@ Basic theory about redis : https://www.educative.io/blog/what-is-redis
 
 - Step 1: create a spring boot project add dependencies >> web,lombok,spring data redis,lombok,devtools
 - add Jedis in pom.xml
-- Step 2: Create  Hash classes (Entity classes)
+- Step 2: Create  Hash classes (Entity classes) ( in memory MAP Collection)
 
 ```java
 package com.yog.test.springrediscachevanilla.hash;
@@ -168,21 +168,7 @@ public class CustomrsDAO {
 
 ```
 
-- Step 5 : create a Repository Class extends CRUS Repo.
-
-```java
-package com.yog.test.springrediscachevanilla.repository;
-
-import com.yog.test.springrediscachevanilla.hash.Customrs;
-import org.springframework.data.repository.CrudRepository;
-
-public interface CustomrsRepository extends CrudRepository<Customrs, Integer> {
-
-}
-
-```
-
-- Step 6: create Service Layer from DAO Class
+- Step 5: create Service Layer from DAO Class
 
 ```java
 package com.yog.test.springrediscachevanilla.service;
@@ -223,7 +209,7 @@ public class CustomrsService {
 
 ```
 
-- Step 7: Controller Class —> start server —> install redis Helper plugin intellj  visualize the data
+- Step 6: Controller Class —> start server —> install redis Helper plugin intellj  visualize the data
 
 ```java
 package com.yog.test.springrediscachevanilla.controller;
@@ -269,7 +255,7 @@ public class CustomrsController {
 }
 ```
 
-- Step 8: Application.properties
+- Step 7: Application.properties
 
 ```java
 spring.application.name=springRedisCacheVanilla
@@ -277,11 +263,12 @@ spring.application.name=springRedisCacheVanilla
 server.port=9991
 ```
 
-Before start start ur redis :
+- Step 8: Before start start ur redis :
 
 ```java
-link to setup redis :  https://redis.io/docs/getting-started/installation/
-Basic theory about redis :  https://www.educative.io/blog/what-is-redis/
+link to setup redis : https://redis.io/docs/getting-started/installation/
+
+Basic theory about redis : https://www.educative.io/blog/what-is-redis
 
 brew install redis
 redis-server
