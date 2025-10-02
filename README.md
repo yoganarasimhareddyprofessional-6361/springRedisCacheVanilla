@@ -277,6 +277,21 @@ spring.application.name=springRedisCacheVanilla
 server.port=9991
 ```
 
+Before start start ur redis :
+
+```java
+link to setup redis :  https://redis.io/docs/getting-started/installation/
+Basic theory about redis :  https://www.educative.io/blog/what-is-redis/
+
+brew install redis
+redis-server
+or 
+brew services start redis
+
+brew services info redis
+brew services stop redis
+```
+
 Now we can use Redis in 3 possible ways as below :
 
 1. Redis as DB (JPA calls)
